@@ -1,0 +1,3 @@
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build/CMakeFiles/rayTracer.dir
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build/CMakeFiles/edit_cache.dir
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build/CMakeFiles/rebuild_cache.dir

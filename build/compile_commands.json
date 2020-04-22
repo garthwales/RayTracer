@@ -1,0 +1,127 @@
+[
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\AmbientLightSource.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\AmbientLightSource.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/AmbientLightSource.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Camera.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Camera.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Camera.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Colour.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Colour.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Colour.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Cube.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Cube.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Cube.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Cylinder.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Cylinder.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Cylinder.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Direction.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Direction.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Direction.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\DirectionalLightSource.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\DirectionalLightSource.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/DirectionalLightSource.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\ImageDisplay.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\ImageDisplay.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/ImageDisplay.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\LightSource.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\LightSource.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/LightSource.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Material.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Material.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Material.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Matrix.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Matrix.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Matrix.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Normal.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Normal.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Normal.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Object.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Object.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Object.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Octahedron.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Octahedron.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Octahedron.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\PinholeCamera.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\PinholeCamera.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/PinholeCamera.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Plane.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Plane.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Plane.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Point.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Point.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Point.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\PointLightSource.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\PointLightSource.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/PointLightSource.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Scene.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Scene.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Scene.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\SceneReader.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\SceneReader.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/SceneReader.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Sphere.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Sphere.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Sphere.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\SpotLightSource.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\SpotLightSource.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/SpotLightSource.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Transform.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Transform.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Transform.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\Vector.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\Vector.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Vector.cpp"
+},
+{
+  "directory": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/build",
+  "command": "c:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE    -g   -std=c++17 -o CMakeFiles\\rayTracer.dir\\rayTracerMain.cpp.obj -c C:\\Users\\garth\\Desktop\\University\\342\\05_RAYTRACER\\RayTracer\\rayTracerMain.cpp",
+  "file": "C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/rayTracerMain.cpp"
+}
+]

@@ -1,0 +1,18 @@
+Scene
+    BackgroundColour 0 0 0
+    RenderSize 500 500
+    Filename cubeTest1.png
+End
+
+Object Cube
+    Colour 1 0 0
+End
+
+Camera PinholeCamera 1
+    Translate 0 0 -3
+    Rotate Y 30
+End
+
+Light AmbientLight
+    Colour 1 1 1
+End
