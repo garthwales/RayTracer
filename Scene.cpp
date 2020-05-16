@@ -60,6 +60,10 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 	Colour diffuseColour;
 	Direction lightNorm;
 
+	Colour specularColour;
+	Direction lightReflectedNorm;
+	Direction viewNorm = -ray.direction / ray.direction.norm();
+
 	Scene::intersect(ray);
 
 	for (const auto & light : lights_) {
@@ -80,9 +84,10 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 				continue;
 			}
 
-			// Have to put a negative on the division, otherwise lighting is opposite 
-			// (left to right instead of right to left for intensity)
-			lightNorm = light->getLightDirection(hitPoint.point) / -light->getLightDirection(hitPoint.point).norm();
+			// Have to put a negative, otherwise lighting is opposite 
+			// (left to right instead of right to left for intensity given a right sided light)
+			lightNorm = -light->getLightDirection(hitPoint.point);
+			lightNorm /= light->getLightDirection(hitPoint.point).norm();
 
 			// Calculate diffuse colour (Lambertian) from light source.
 			// std::max to ensure we only add on the positive terms, otherwise it removes light when angle > 90 deg.
@@ -90,8 +95,16 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			diffuseColour = hitPoint.material.diffuseColour * std::max(hitNorm.dot(lightNorm),0.0);
 
 			// Calculate the specular colour or something
+			// r hat = 2(l.n)n-l
+			lightReflectedNorm = 2 * lightNorm.dot(hitNorm) * hitNorm - lightNorm;
+			lightReflectedNorm /= lightReflectedNorm.norm();
 
-			hitColour += light->getIlluminationAt(hitPoint.point) * (diffuseColour); // add specular into the brackets
+			specularColour = hitPoint.material.specularColour * std::pow(
+								std::max(viewNorm.dot(lightReflectedNorm), 0.0)
+								, hitPoint.material.specularExponent);
+
+
+			hitColour += light->getIlluminationAt(hitPoint.point) * (diffuseColour + specularColour);
 		}
 	}
 
