@@ -108,9 +108,17 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 		}
 	}
 
-	/**********************************
-	* TODO - ADD MIRROR EFFECTS HERE *
-	**********************************/
+	// Mirror reflections
+	if (rayDepth > 0) { // could need some things for if mirrorColour.red > epsilon sorta thing idk what im doing
+		// m = 2(n.v)n-v
+		Ray mirrorRay;
+		mirrorRay.point = hitPoint.point;
+		mirrorRay.direction = 2 * (hitNorm.dot(viewNorm)) * hitNorm - viewNorm;
+
+		// mirrorNorm /= mirrorNorm.norm(); 
+		hitColour= (Colour(1,1,1) - hitPoint.material.mirrorColour) * hitColour
+					+ hitPoint.material.mirrorColour * computeColour(mirrorRay, rayDepth-1);
+	}
 
 	hitColour.clip();
 	return hitColour;
