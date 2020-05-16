@@ -1,18 +1,36 @@
 Scene
     BackgroundColour 0 0 0
     RenderSize 500 500
-    Filename cubeTest1.png
+    Filename shadows.png
+End
+
+Object Sphere
+    Colour 1 0 0
+    Translate 0 0 2
+End
+
+Object Plane
+    Scale 10
+    Colour 1 1 1
+    Rotate X 90
+    Translate 0 1 0
 End
 
 Object Cube
-    Colour 1 0 0
+    Colour 1 1 1
+    Translate -3 0 6
+    Rotate Y 45
+End
+# x (+ ->) y (+ /\) z (+ ^) 
+Camera PinholeCamera 1
+    Translate 0 0 -1
 End
 
-Camera PinholeCamera 1
-    Translate 0 0 -3
-    Rotate Y 30
+Light PointLight
+    Location 3 0 0
+    Colour 6 6 6
 End
 
 Light AmbientLight
-    Colour 1 1 1
+    Colour 0.2 0.2 0.2
 End
