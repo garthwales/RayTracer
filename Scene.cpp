@@ -60,6 +60,8 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 	Colour diffuseColour;
 	Direction lightNorm;
 
+	Scene::intersect(ray);
+
 	for (const auto & light : lights_) {
 		// Compute the influence of this light on the appearance of the hit object.
 		if (light->getDistanceToLight(hitPoint.point) < 0) {
@@ -67,31 +69,19 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.ambientColour;
 		} else{
 			/************************************************** 
-			 * TODO - ADD DIFFUSE AND SPECULAR LIGHTING HERE  *
-			 *      - SHADOW COMPUTATIONS GO HERE ALSO        *
+			 * TODO - SPECULAR LIGHTING HERE  				  *
 			 * ************************************************/
 			
-			// Find out if we are in a shadow, so don't calculte the rest of this.
-			// Ray shadowRay;
-			// shadowRay.point = hitPoint.point;
-			// shadowRay.direction = light->getLightDirection(hitPoint.point);
+			// Find out if we are in a shadow, if so don't calculte the rest of this.
+			Ray shadowRay;
+			shadowRay.point = hitPoint.point;
+			shadowRay.direction = -light->getLightDirection(hitPoint.point); //negative else shadows dont work :)
+			if(intersect(shadowRay).distance < light->getDistanceToLight(hitPoint.point)) {
+				continue;
+			}
 
-			// bool inShade = false;
-			// for (auto &obj : objects_) {
-			// 	std::vector<RayIntersection> hits = obj->intersect(shadowRay);
-			// 	for (auto &hit : hits) {
-			// 		// also could add hit.distance > 0.0 && ...
-			// 		if(hit.distance < light->getDistanceToLight(hitPoint.point)) {
-			// 			inShade = true;
-			// 			break;
-			// 		}
-			// 	}
-			// }
-
-			// if (inShade) {
-			// 	continue;
-			// }
-
+			// Have to put a negative on the division, otherwise lighting is opposite 
+			// (left to right instead of right to left for intensity)
 			lightNorm = light->getLightDirection(hitPoint.point) / -light->getLightDirection(hitPoint.point).norm();
 
 			// Calculate diffuse colour (Lambertian) from light source.
