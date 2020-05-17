@@ -1,10 +1,11 @@
 Scene
     BackgroundColour 0 0 0
     RenderSize 500 500
-    Filename specular.png
+    Filename cylinder.png
 End
 
-Object Sphere
+Object Cylinder
+    Rotate Y 50
     Colour 1 0 0
     Specular 1 1 1 10
     Translate 0 0 2
@@ -23,7 +24,7 @@ Object Cube
     Translate -3 0 6
     Rotate Y 45
 End
-# x (+ ->) y (+ /\) z (+ ^) 
+# x (+ ->) y (+ /\) z (+ /) 
 Camera PinholeCamera 1
     Translate 0 0 -1
 End

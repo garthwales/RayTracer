@@ -52,16 +52,14 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 	}
 
 	Colour hitColour(0, 0, 0);
-		
-	/******************************************************************
-	 * Code for better lighting, shadows, and reflections goes below. *
-	 ******************************************************************/
+
 	Normal hitNorm = hitPoint.normal / hitPoint.normal.norm();
 	Colour diffuseColour;
 	Direction lightNorm;
 
 	Colour specularColour;
 	Direction lightReflectedNorm;
+	// direction towards the viewport
 	Direction viewNorm = -ray.direction / ray.direction.norm();
 
 	Scene::intersect(ray);
@@ -72,29 +70,23 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			// An ambient light, ignore shadows and add appropriate colour
 			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.ambientColour;
 		} else{
-			/************************************************** 
-			 * TODO - SPECULAR LIGHTING HERE  				  *
-			 * ************************************************/
 			
 			// Find out if we are in a shadow, if so don't calculte the rest of this.
 			Ray shadowRay;
 			shadowRay.point = hitPoint.point;
-			shadowRay.direction = -light->getLightDirection(hitPoint.point); //negative else shadows dont work :)
+			shadowRay.direction = -light->getLightDirection(hitPoint.point);
 			if(intersect(shadowRay).distance < light->getDistanceToLight(hitPoint.point)) {
 				continue;
 			}
 
-			// Have to put a negative, otherwise lighting is opposite 
-			// (left to right instead of right to left for intensity given a right sided light)
 			lightNorm = -light->getLightDirection(hitPoint.point);
 			lightNorm /= light->getLightDirection(hitPoint.point).norm();
 
 			// Calculate diffuse colour (Lambertian) from light source.
 			// std::max to ensure we only add on the positive terms, otherwise it removes light when angle > 90 deg.
-			// diffuseColour = hitPoint.material.diffuseColour * hitNorm.dot(lightNorm);
 			diffuseColour = hitPoint.material.diffuseColour * std::max(hitNorm.dot(lightNorm),0.0);
 
-			// Calculate the specular colour or something
+			// Calculate the specular colour component
 			// r hat = 2(l.n)n-l
 			lightReflectedNorm = 2 * lightNorm.dot(hitNorm) * hitNorm - lightNorm;
 			lightReflectedNorm /= lightReflectedNorm.norm();
