@@ -27,14 +27,29 @@ SpotLightSource& SpotLightSource::operator=(const SpotLightSource& lightSource) 
 }
 
 Colour SpotLightSource::getIlluminationAt(const Point& point) const {
-  
-	Colour colour;
+	/**
+	 * Caculate vector from cone to point, and normalise.
+	 * Normalise the lights direction vector.
+	 * Take the dot product of these two normalised directions.
+	 * The dot product between two normal vectors is the cosine of angle between them.
+	 * Thus, take arccos (acos in c++) of their dot product to get the angle.
+	 * If angle is < angle_ then point is within the spotlight.
+	 */
 
-	/**************************************************************
- 	 * Code to compute spotlight illumination at point goes here. *
-	 **************************************************************/
+	Direction lightNorm = (point - location_);
+	lightNorm /= lightNorm.norm();
 
-	return colour;
+	Direction coneNorm = direction_ / direction_.norm();
+
+	double angle = acos(lightNorm.dot(direction_));
+	if(angle > angle_) {
+		return Colour(0,0,0);
+	}
+
+	// Decrease intensity with square of distance.
+	double distance = (location_ - point).norm();
+	if (distance < epsilon) distance = epsilon;
+	return (1.0 / (distance*distance)) * colour_;
 }
 
 double SpotLightSource::getDistanceToLight(const Point& point) const {

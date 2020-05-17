@@ -24,13 +24,8 @@ DirectionalLightSource& DirectionalLightSource::operator=(const DirectionalLight
 }
 
 Colour DirectionalLightSource::getIlluminationAt(const Point& point) const {
-	Colour colour;
-
-	/****************************************************************
-	 * Code to compute directional illumination at point goes here. *
-	 ****************************************************************/
-
-	return colour;
+	// illumination constant, distance infinite therefore return colour_.
+	return colour_;
 }
 
 double DirectionalLightSource::getDistanceToLight(const Point& point) const {

@@ -130,46 +130,6 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 		}	
 
 	}
-
-
 	
-		// double  z0 = inverseRay.point (2);
-		// double  dz = inverseRay.direction (2);
-
-		// double t1 = (-1-z0)/dz;
-     	// double t2 = (1-z0)/dz;
-
-		// if (t1 > 0) {
-		// 	hit.point = inverseRay.point + t1*inverseRay.direction;
-		// 	if(std::abs(hit.point(0)) < 1 && std::abs(hit.point(1)) < 1) {
-				
-		// 		hit.point = transform.apply(hit.point);
-		// 		hit.material = material;
-		// 		hit.normal = transform.apply(Normal(0,0,1));
-		// 		if (hit.normal.dot(ray.direction) > 0) {
-		// 			hit.normal = -hit.normal;
-		// 		}
-		// 		hit.distance = (hit.point - ray.point).norm();
-		// 		result.push_back(hit);
-		// 	}
-		// }
-
-		// if (t2 > 0) {
-		// 	hit.point = inverseRay.point + t2*inverseRay.direction;
-		// 	if(std::abs(hit.point(0)) < 1 && std::abs(hit.point(1)) < 1) {
-				
-		// 		hit.point = transform.apply(hit.point);
-		// 		hit.material = material;
-		// 		hit.normal = transform.apply(Normal(0,0,1));
-		// 		if (hit.normal.dot(ray.direction) > 0) {
-		// 			hit.normal = -hit.normal;
-		// 		}
-		// 		hit.distance = (hit.point - ray.point).norm();
-		// 		result.push_back(hit);
-		// 	}
-		// }
-
-
-
-		return result;
+	return result;
 }
