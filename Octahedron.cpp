@@ -78,7 +78,7 @@ std::vector<RayIntersection> Octahedron::intersect(const Ray& ray) const {
 		// (The normal dotted with any point in plane)
 		double d = n.dot(A);
 
-		// solve for t in equation
+		// solve for t in equation, ray = point + t*direction.
 		double t = (d - n.dot(inverseRay.point)) / n.dot(inverseRay.direction);
 		
 		// If the intersection is in front of ray.
