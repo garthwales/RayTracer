@@ -50,9 +50,7 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 
 	// saves having to check both for < -1 and > 1
 	if(t0 > t1){
-		double temp = t0;
-		t0 = t1;
-		t1 = temp;
+		std::swap(t0,t1);
 	}
 
 	double z0t0 = z0 + t0 * dz;
@@ -130,6 +128,6 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 		}	
 
 	}
-	
+
 	return result;
 }

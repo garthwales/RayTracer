@@ -12,17 +12,41 @@ C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Direction.h
 Vector.h
 C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Vector.h
 
-C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/LightSource.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Material.h
 Colour.h
 C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Colour.h
-Ray.h
-C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Ray.h
 
 C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Matrix.h
 vector
 -
 iostream
 -
+
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Normal.h
+Vector.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Vector.h
+
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Object.h
+Material.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Material.h
+Ray.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Ray.h
+RayIntersection.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/RayIntersection.h
+Transform.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Transform.h
+vector
+-
+
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Octahedron.cpp
+Octahedron.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Octahedron.h
+utility.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/utility.h
+
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Octahedron.h
+Object.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Object.h
 
 C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Point.h
 Vector.h
@@ -34,17 +58,27 @@ C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Point.h
 Direction.h
 C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Direction.h
 
-C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/SpotLightSource.cpp
-SpotLightSource.h
-C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/SpotLightSource.h
-utility.h
-C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/utility.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/RayIntersection.h
+Point.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Point.h
+Material.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Material.h
+Normal.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Normal.h
+memory
+-
 
-C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/SpotLightSource.h
-LightSource.h
-C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/LightSource.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Transform.h
 Direction.h
 C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Direction.h
+Matrix.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Matrix.h
+Normal.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Normal.h
+Point.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Point.h
+Ray.h
+C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Ray.h
 
 C:/Users/garth/Desktop/University/342/05_RAYTRACER/RayTracer/Vector.h
 Matrix.h
