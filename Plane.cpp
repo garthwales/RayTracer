@@ -34,7 +34,7 @@ std::vector<RayIntersection> Plane::intersect(const Ray& ray) const {
 		double t = -z0/dz;
 		if (t > epsilon) {
 			// Hit is in front of ray
-			RayIntersection  hit;
+			RayIntersection hit;
 			hit.point = inverseRay.point + t*inverseRay.direction;
 			if(std::abs(hit.point(0)) < 1 && std::abs(hit.point(1)) < 1) {
 				// In square region -- compute hit point details
@@ -50,6 +50,5 @@ std::vector<RayIntersection> Plane::intersect(const Ray& ray) const {
 		}
 	}
 	
-
 	return result;
 }

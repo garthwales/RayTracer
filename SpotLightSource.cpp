@@ -36,12 +36,17 @@ Colour SpotLightSource::getIlluminationAt(const Point& point) const {
 	 * If angle is < angle_ then point is within the spotlight.
 	 */
 
+	// Unit direction from cone to point
 	Direction lightNorm = (point - location_);
 	lightNorm /= lightNorm.norm();
 
+	// Unit direction from light
 	Direction coneNorm = direction_ / direction_.norm();
 
+	// dot product of two normal vectors = cosine of angle
+	// so angle = inverse of cos of this dot product
 	double angle = acos(lightNorm.dot(direction_));
+	// if angle > the half angle, angle_ then cut off the lighting
 	if(angle > angle_) {
 		return Colour(0,0,0);
 	}
@@ -57,9 +62,6 @@ double SpotLightSource::getDistanceToLight(const Point& point) const {
 }
 
 Direction SpotLightSource::getLightDirection(const Point& point) const {
-	Direction lightDirection;
-
+	
 	return point - location_;
-
-	return lightDirection;
 }

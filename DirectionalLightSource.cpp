@@ -24,7 +24,7 @@ DirectionalLightSource& DirectionalLightSource::operator=(const DirectionalLight
 }
 
 Colour DirectionalLightSource::getIlluminationAt(const Point& point) const {
-	// illumination constant, distance infinite therefore return colour_.
+	// Illumination is constant and distance infinite therefore return colour_.
 	return colour_;
 }
 

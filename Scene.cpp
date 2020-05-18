@@ -53,13 +53,15 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 
 	Colour hitColour(0, 0, 0);
 
+	// unit normal from point of intersection
 	Normal hitNorm = hitPoint.normal / hitPoint.normal.norm();
 	Colour diffuseColour;
+	// unit direction from hit point to the light,
 	Direction lightNorm;
 
 	Colour specularColour;
 	Direction lightReflectedNorm;
-	// direction towards the viewport
+	// unit direction towards the viewport
 	Direction viewNorm = -ray.direction / ray.direction.norm();
 
 	Scene::intersect(ray);
@@ -70,24 +72,28 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			// An ambient light, ignore shadows and add appropriate colour
 			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.ambientColour;
 		} else{
-			
-			// Find out if we are in a shadow, if so don't calculte the rest of this.
+			// Otherwise if not an ambient light,
+			// calculate diffuse and specular lighting.
+
+			// First, find out if we are in a shadow, 
+			// if so don't calculte the rest of the lighting.
 			Ray shadowRay;
 			shadowRay.point = hitPoint.point;
 			shadowRay.direction = -light->getLightDirection(hitPoint.point);
 			if(intersect(shadowRay).distance < light->getDistanceToLight(hitPoint.point)) {
-				continue;
+				continue; // skip to the next light
 			}
 
 			lightNorm = -light->getLightDirection(hitPoint.point);
 			lightNorm /= light->getLightDirection(hitPoint.point).norm();
 
 			// Calculate diffuse colour (Lambertian) from light source.
-			// std::max to ensure we only add on the positive terms, otherwise it removes light when angle > 90 deg.
+			// std::max to ensure we only add on the positive terms, 
+			// otherwise it removes light when angle > 90 deg.
 			diffuseColour = hitPoint.material.diffuseColour * std::max(hitNorm.dot(lightNorm),0.0);
 
-			// Calculate the specular colour component
-			// r hat = 2(l.n)n-l
+			// Calculate the specular colour component.
+			// As given by: r hat = 2(l.n)n-l
 			lightReflectedNorm = 2 * lightNorm.dot(hitNorm) * hitNorm - lightNorm;
 			lightReflectedNorm /= lightReflectedNorm.norm();
 
@@ -95,14 +101,14 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 								std::max(viewNorm.dot(lightReflectedNorm), 0.0)
 								, hitPoint.material.specularExponent);
 
-
+			// Sum all of the lights diffuse and specular contributions.
 			hitColour += light->getIlluminationAt(hitPoint.point) * (diffuseColour + specularColour);
 		}
 	}
 
 	// Mirror reflections
-	if (rayDepth > 0) { // could need some things for if mirrorColour.red > epsilon sorta thing idk what im doing
-		// m = 2(n.v)n-v
+	if (rayDepth > 0) { // To avoid infinite recursion.
+		// mirror.direction = 2(n.v)n-v
 		Ray mirrorRay;
 		mirrorRay.point = hitPoint.point;
 		mirrorRay.direction = 2 * (hitNorm.dot(viewNorm)) * hitNorm - viewNorm;
