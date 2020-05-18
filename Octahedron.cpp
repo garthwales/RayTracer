@@ -58,29 +58,6 @@ std::vector<RayIntersection> Octahedron::intersect(const Ray& ray) const {
 	std::array<std::array<Point, 3>,8> faces = {face1, face2, face3, face4, face5, face6, face7, face8};
 
 	for (const auto & face : faces) {
-		// A = V1-V0
-		// B = V2 - V0
-
-		// R0.X + t * Rd.X = V0.X + u * A.X + v * B.X
-		// R0.Y + t * Rd.Y = V0.Y + u * A.Y + v * B.Y
-		// R0.Z + t * Rd.Z = V0.Z + u * A.Z + v * B.Z]
-		
-
-		// plane = ax + by + cz = d
-		// so n . x = d (n = [a;b;c], x = [x;y;z])
-
-		// triangle with A,B,C points
-		// only need normal of plane
-		// n = ((B-A) cross (C-A)) /= n.norm()
-
-		// R(t) = P + td
-		// t = (d - n.P) / n.d
-		// (if n.d == 0 then parallel, doesn't intersect)
-
-		// plane d = n.A (any vertice of triangle creates the plane formula)
-
-
-
 		// It'd be quicker to project the triangle onto an axis
 		// aligned plane and then do calculations in 2D.
 
@@ -132,52 +109,7 @@ std::vector<RayIntersection> Octahedron::intersect(const Ray& ray) const {
 				result.push_back(hit);
 			}
 		}
-		
-
-
-
-		// Vector A = face[1] - face[0]; // Edge vector
-		// Vector B = face[2] - face[0]; // Edge vector
-		// Vector AB = A.cross(B);
-		// AB /= AB.norm();
-
-		// Vector p = inverseRay.direction.cross(B);
-		// double a = A.dot(p);
-		// if(a < epsilon) {
-		// 	return result;
-		// }
-
-		// double f = 1/a;
-		// Vector s = inverseRay.point - B;
-		// double u = f * s.dot(p);
-		// if (u < 0.0 || u > 1.0) {
-		// 	return result;
-		// }
-		
-		// Vector q = s.cross(A);
-		// double v = f * inverseRay.direction.dot(q);
-		// if (v < 0.0 || u+v > 0.0) {
-		// 	return result;
-		// }
-
-		// double t = f * B.dot(q);
-		// RayIntersection hit;
-		// hit.normal = AB;
-		// hit.point = inverseRay.point + t*inverseRay.direction;
-		// hit.point = transform.apply(hit.point);
-		// hit.material = material;
-		// if (hit.normal.dot(ray.direction) > 0) {
-		// 	hit.normal = -hit.normal;
-		// }
-		// hit.distance = (hit.point * t).norm();
-		// std::cout << "Works?" << std::endl;
-		// result.push_back(hit);
 	}
-
-	// https://stackoverflow.com/questions/40560000/ray-tracing-triangles
-	// https://stackoverflow.com/questions/13655457/raytracing-ray-triangle-intersection
-	// https://courses.cs.washington.edu/courses/csep557/10au/lectures/triangle_intersection.pdf
-
 
 	return result;
 }
