@@ -1,0 +1,63 @@
+Scene
+    BackgroundColour 0 0 0
+    RenderSize 500 500
+    Filename sampleScene.png
+End
+
+Object Octahedron
+    Colour 1 0 0
+    Specular 0.4 0.4 0.4 5
+    Translate -2 0 -1
+    Rotate Y 60
+End
+
+Object Plane
+    Mirror 0.6 0.6 0.6
+    Scale 10
+    Colour 1 1 1
+    Rotate X 90
+    Translate 0 1 0
+End
+
+Object Cube
+    Colour 1 1 1
+    Translate -3 0 6
+    Rotate Y 45
+End
+
+Object Cylinder
+	Specular 1 1 1 10
+	Scale 0.5
+	Colour 0 1 0
+	Translate -1 0.5 0.5
+	Rotate Y 60
+End
+
+Camera PinholeCamera 1
+    Translate 0 0 -1.5
+End
+
+Light DirectionalLight
+    Direction -1.5 0.2 1
+    Colour 0.6 0.6 0.6
+End
+
+Light PointLight
+    Location 5 0 5
+    Colour 0 0 3
+End
+
+Light PointLight
+    Location 4 0 4
+    Colour 0 3 0
+End
+
+Light PointLight
+    Location 3 0 3
+    Colour 3 0 0
+End
+
+Light AmbientLight
+    Colour 0.3 0.3 0.3
+End
+

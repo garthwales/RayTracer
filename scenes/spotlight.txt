@@ -1,0 +1,33 @@
+Scene
+    BackgroundColour 0 0 0
+    RenderSize 500 500
+    Filename spotlight.png
+End
+
+Object Plane
+    Scale 1
+    Colour 0 1 0
+    Translate -1 0 1
+End
+
+Object Plane
+    Scale 1
+    Colour 1 0 0
+    Translate -3 0 3
+    Rotate Y 55
+End
+
+Camera PinholeCamera 1
+    Translate 0 0 -1
+End
+
+Light SpotLight
+    Location 0 0 0
+    Direction 0 0 1
+    Angle 0.3
+    Colour 2 2 2
+End
+
+Light AmbientLight
+    Colour 0.4 0.4 0.4
+End
